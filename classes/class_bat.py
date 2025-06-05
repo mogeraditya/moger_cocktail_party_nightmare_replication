@@ -9,11 +9,10 @@ upper_boundary= 10
 threshold_SPL=10
 
 class Bat:
-    def __init__(self, x, y, speed, direction, SPL):
+    def __init__(self, x, y,SPL):
         self.x = x
         self.y = y
-        self.speed = speed
-        self.direction = direction
+
         self.SPL = SPL
 
         self.xvel= 0
@@ -102,3 +101,5 @@ class Bat:
     def find_active_space(self): #For visualization purposes
         SPL = self.SPL
         return (20*10**((SPL-threshold_SPL)/ref_dist))
+    #creates a ball arund the bat,  for visualization
+
